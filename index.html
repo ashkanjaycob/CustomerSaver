@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact manager</title>
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="Fs/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div inputmode="numeric" minlength="8" class="inputs my-4 col-12 col-md-8 ">
+                <h2>Customer Manager pro 2023</h2>
+                <hr>
+                <form id="form">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">FullName : </span>
+                        <input id="FullName" type="text" class="form-control"
+                            placeholder="Please Enter Your Customer's Full Name Here .  Example John Doe"
+                            aria-label="Username" aria-describedby="basic-addon1" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Email Address : </span>
+                        <input id="mail" type="text" class="form-control"
+                            placeholder="Please Enter Your Customer's Currect Email - JohnDoe@Email.com"
+                            aria-label="Username" aria-describedby="basic-addon1" >
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Phone Number : </span>
+                        <input id="Phone" type="number" class="form-control"
+                            placeholder="Please Enter Your Customer's Phone . 0912 456 7892" aria-label="Username"
+                            aria-describedby="basic-addon1" >
+                    </div>
+
+                    <button id="submitBtn" type="submit" class="btn btn-dark">Save Customer</button>
+
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="outputs table-responsive ">
+                <table id="table" class="table table-hover text-center table-light table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">.</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Phone Number</th>
+                            <td>Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody id="TableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br><hr class="text-success">
+        <div class="row">
+            <div class="serachbox  my-4 col-12 col-md-5">
+                <h3>Search in all Customers : </h3>
+                <hr>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Name , Number or Email ..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+
+            </div>
+
+            <div class="serachbox  my-4 col-12 col-md-5">
+                <h3>Results</h3>
+                <hr>
+                <div class="mb-3">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="Bootstrap/bootstrap.min.js"></script>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="Fs/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
