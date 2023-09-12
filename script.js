@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   const TableBody = $("#TableBody");
   TableBody.html(localStorage.getItem("dataCustomer"));
 
@@ -21,23 +22,14 @@ $(document).ready(function () {
   }
 
 
-
-  // form validation in jquery Validation plug-in
-
-
-
-
-
-
   // main Table Creator Function
   $("#submitBtn").click(function () {
-
     // form preventDefault
     $("#form").submit(function (event) {
       event.preventDefault();
     }).validate({
       rules: {
-        FullName : "required",
+        FullName: "required",
         Phone: "required",
         mail: {
           required: true,
@@ -45,19 +37,19 @@ $(document).ready(function () {
         }
       },
       messages: {
-        FullName : {
-          required : "Please Enter Your FullName.",
-        } ,
-        Phone : {
-          required : "Please Enter Your Phone Number.",
-        } ,
-        mail : {
-          required : "Please Enter an Email.",
-          mail : "Please Enter an <i>Valid </i> Email."
+        FullName: {
+          required: "Please Enter Your FullName.",
+        },
+        Phone: {
+          required: "Please Enter Your Phone Number.",
+        },
+        mail: {
+          required: "Please Enter an Email.",
+          mail: "Please Enter an <i>Valid </i> Email."
         }
       },
-      submitHandler: function(form) {
-        let TableRow = $(`<tr></tr>`);
+      submitHandler: function (form) {
+        let TableRow = $(`<tr class="TbRw"></tr>`);
         TableRow.html(`
             <th>${Num}</th>
             <td>${name.val()}</td>
@@ -65,13 +57,13 @@ $(document).ready(function () {
             <td>${Phone.val()}</td>
             <td class="DelI text-danger"><i class="fa fa-close"></i></td>
             `);
-    
+
         TableBody.append(TableRow);
-    
+
         localStorage.setItem("dataCustomer", TableBody.html());
         Num++;
         localStorage.setItem("CustomerNum", Num);
-    
+
         function ResetVals() {
           name.val(""),
             Mail.val(""),
@@ -80,9 +72,24 @@ $(document).ready(function () {
         ResetVals();
       }
     });
-
-
   });
+
+
+  // Delete button activition 
+  let deletBtns = $(".DelI");
+
+  // deletBtns.click(function hideParent() {
+  // });
+
+  $(function () {
+    deletBtns.click(function () {
+      $(this).parent().hide();
+      localStorage.setItem("dataCustomer", TableBody.html());
+      return false;
+    });
+  });
+
+
 });
 
 
