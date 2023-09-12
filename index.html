@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-between">
             <div inputmode="numeric" minlength="8" class="inputs my-4 col-12 col-md-8 ">
-                <h2>Customer Manager pro 2023</h2>
+                <h2>Customer Manager pro by Ashkan</h2>
                 <hr>
                 <form id="form">
                     <div class="input-group mb-3">
@@ -38,7 +38,18 @@
                     </div>
 
                     <button id="submitBtn" type="submit" class="btn btn-dark">Save Customer</button>
-
+                    <br><hr class="text-success">
+                    <div class="row">
+                        <div class="serachbox  my-4 col-12 col-md-5">
+                            <h3>Search in all Customers : </h3>
+                            <hr>
+                            <div class="input-group mb-3">
+                                <input id="search" type="text" class="form-control" placeholder="Name , Number or Email ..."
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -47,7 +58,7 @@
                 <table id="table" class="table table-hover text-center table-light table-bordered">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">.</th>
+                            <th scope="col">Number</th>
                             <th scope="col">Full Name</th>
                             <th scope="col">Email Address</th>
                             <th scope="col">Phone Number</th>
@@ -58,28 +69,6 @@
 
                     </tbody>
                 </table>
-            </div>
-        </div>
-        <br><hr class="text-success">
-        <div class="row">
-            <div class="serachbox  my-4 col-12 col-md-5">
-                <h3>Search in all Customers : </h3>
-                <hr>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Name , Number or Email ..."
-                        aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-                </div>
-
-            </div>
-
-            <div class="serachbox  my-4 col-12 col-md-5">
-                <h3>Results</h3>
-                <hr>
-                <div class="mb-3">
-
-                </div>
-
             </div>
         </div>
 

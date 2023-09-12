@@ -77,18 +77,23 @@ $(document).ready(function () {
 
   // Delete button activition 
   let deletBtns = $(".DelI");
-
-  // deletBtns.click(function hideParent() {
-  // });
-
   $(function () {
     deletBtns.click(function () {
       $(this).parent().hide();
       localStorage.setItem("dataCustomer", TableBody.html());
+      Num--;
+      localStorage.setItem("CustomerNum", Num);
       return false;
     });
   });
 
+  // searchbox code 
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#TableBody tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
 
 });
 
