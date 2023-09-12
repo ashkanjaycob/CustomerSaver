@@ -20,21 +20,21 @@
                 <form id="form">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">FullName : </span>
-                        <input id="FullName" type="text" class="form-control"
+                        <input id="FullName" name="FullName" type="text" class="form-control"
                             placeholder="Please Enter Your Customer's Full Name Here .  Example John Doe"
-                            aria-label="Username" aria-describedby="basic-addon1" required>
+                            aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Email Address : </span>
-                        <input id="mail" type="text" class="form-control"
+                        <input id="mail" name="mail" type="text" class="form-control"
                             placeholder="Please Enter Your Customer's Currect Email - JohnDoe@Email.com"
-                            aria-label="Username" aria-describedby="basic-addon1" >
+                            aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Phone Number : </span>
-                        <input id="Phone" type="number" class="form-control"
+                        <input id="Phone" name="Phone" type="number" class="form-control"
                             placeholder="Please Enter Your Customer's Phone . 0912 456 7892" aria-label="Username"
-                            aria-describedby="basic-addon1" >
+                            aria-describedby="basic-addon1">
                     </div>
 
                     <button id="submitBtn" type="submit" class="btn btn-dark">Save Customer</button>
@@ -91,6 +91,8 @@
     <script src="Bootstrap/bootstrap.bundle.min.js"></script>
     <script src="Bootstrap/bootstrap.min.js"></script>
     <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <!-- <script src="validation/additional-methods.min.js"></script> -->
+    <script src="validation/jquery.validate.min.js"></script>
     <script src="Fs/all.min.js"></script>
     <script src="script.js"></script>
 </body>

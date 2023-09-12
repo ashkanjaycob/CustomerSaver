@@ -7,3 +7,13 @@ input::-webkit-inner-spin-button {
 .DelI {
     cursor: pointer !important;
 }
+
+label {
+display: flex;
+font-size: 0.8rem;
+color: rgb(255, 0, 0);
+position: absolute;
+top: 0;
+left: 0;
+margin-top: 36px;
+}
